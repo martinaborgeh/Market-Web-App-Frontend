@@ -13,7 +13,7 @@ export function Signup(){
             Location
         }
  
-        axios.post('http://localhost:8000/Signup', SignUpData)
+        axios.post('http://localhost:5000/Signup', SignUpData)
             .then(() => console.log("Successfully posted")).catch(err=>console.log(err.message))
      }
     return(
