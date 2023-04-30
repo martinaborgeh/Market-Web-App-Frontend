@@ -1,6 +1,6 @@
-import axios from 'axios'
 import { useState} from "react"
-export function Signup(){
+import { GeneralSignup} from "../../General_Reusable_Codes"
+export function SellerSignup(){
     const [Firstname, setFirstname] = useState('')
     const [Lastname, setLastname] = useState('')
     const [Location, setLocation] = useState('')
@@ -13,8 +13,7 @@ export function Signup(){
             Location
         }
  
-        axios.post('http://localhost:8000/Signup', SignUpData)
-            .then(() => console.log("Successfully posted")).catch(err=>console.log(err.message))
+        GeneralSignup('http://localhost:8000/SellerSignup',SignUpData)
      }
     return(
         <form onSubmit={handleSubmit}>
